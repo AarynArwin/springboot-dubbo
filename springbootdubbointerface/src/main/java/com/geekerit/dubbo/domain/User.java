@@ -1,17 +1,13 @@
 package com.geekerit.dubbo.domain;
 
-/**
- * 用户实体
- */
 public class User {
+    private Long id;
 
-    private Long id;                // 用户主键
+    private String username;
 
-    private String username;        // 用户名
+    private String password;
 
-    private String password;        // 密码
-
-    private int age;                // 年龄
+    private Integer age;
 
     public Long getId() {
         return id;
@@ -37,11 +33,11 @@ public class User {
         this.password = password;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 }

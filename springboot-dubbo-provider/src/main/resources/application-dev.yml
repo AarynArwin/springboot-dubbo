@@ -3,3 +3,32 @@ server:
 spring:
   application:
     name: dubbo-spring-boot-starter
+  dubbo:
+    server: true
+    registry: zookeeper://111.231.99.77:2181
+
+
+# 配置连接MySQL信息
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.116:3306/fordearmebox?characterEncoding=utf-8&useSSL=false
+    username: root
+    password: superman713
+    # 使用阿里的Druid配置数据库方便进行SQL监控
+    druid:
+    # 初始化大小、最小、最大连接数
+      initial-size: 3
+      min-idle: 3
+      max-active: 10
+      # 配置获取连接等待超时的时间
+      max-wait: 60000
+      # 监控后台账号和密码
+      stat-view-servlet:
+        login-password: admin
+        login-username: admin
+      # 配置 StatFilter
+      filter:
+        stat:
+          log-slow-sql: true
+          slow-sql-millis: 2000
