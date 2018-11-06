@@ -1,19 +1,17 @@
 server:
-  port: 9999
+  port: 9998
 spring:
   application:
     name: dubbo-spring-boot-starter
   dubbo:
     application:
-      name: provider
+      name: consumer
     registry:
       address: 111.231.99.77
       port: 2181
     protocol:
       name: dubbo
       prot: 20880
-    base-package: com.geekerit.springbootdubboprovider.service
-
 
 # 配置连接MySQL信息
   datasource:
